@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="80dp"> <!-- 🔹 Shift content downward -->
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="NutriScan Analyzer"
+            android:textColor="#104535"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <!-- Image Preview Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="#FFFFFF"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="Scanned_Image"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Camera & Gallery Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center|right"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCamera"
+                android:layout_width="171dp"
+                android:layout_height="65dp"
+                android:backgroundTint="#4F8A36"
+                android:text="📷 Camera"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnGallery"
+                android:layout_width="171dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="#4F8A36"
+                android:gravity="center"
+                android:text="🖼️ Gallery"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!-- Analyze Button -->
+        <Button
+            android:id="@+id/btnAnalyze"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="#018786"
+            android:text="🔬 Analyze Ingredients"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <!-- Progress Indicator -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:visibility="gone" />
+
+        <!-- Result Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/resultCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#FFFFFF"
+            android:visibility="gone"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Health Score -->
+                <TextView
+                    android:id="@+id/scoreView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Health Score: 0/10"
+                    android:textColor="#FF5722"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <!-- Recommendation -->
+                <TextView
+                    android:id="@+id/recommendationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Your health analysis will appear here."
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <!-- Extracted Text Display -->
+                <TextView
+                    android:id="@+id/extractedLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="🧾 Extracted Ingredients:"
+                    android:textColor="#388E3C"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <ScrollView
+                    android:id="@+id/textScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#F1F1F1"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/extractedTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="italic" />
+                </ScrollView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

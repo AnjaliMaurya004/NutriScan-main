@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    android:layout_marginBottom="12dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Number Badge -->
+            <TextView
+                android:id="@+id/tvNumber"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="1"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/circle_badge"
+                android:gravity="center"
+                android:layout_marginEnd="12dp" />
+
+            <!-- Emoji -->
+            <TextView
+                android:id="@+id/tvEmoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✅"
+                android:textSize="24sp"
+                android:layout_marginEnd="12dp" />
+
+            <!-- Ingredient Name -->
+            <TextView
+                android:id="@+id/tvIngredientName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Water"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121" />
+
+            <!-- Score Badge -->
+            <TextView
+                android:id="@+id/tvScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10/10"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#4CAF50"
+                android:background="@drawable/score_badge"
+                android:padding="6dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+        </LinearLayout>
+
+        <!-- Matched As -->
+        <TextView
+            android:id="@+id/tvMatchedAs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matched: Purified Water"
+            android:textSize="12sp"
+            android:textColor="#757575"
+            android:textStyle="italic"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="44dp"
+            android:visibility="gone" />
+
+        <!-- Category Badge -->
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beverages"
+            android:textSize="11sp"
+            android:textColor="#2196F3"
+            android:background="@drawable/category_badge"
+            android:padding="4dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="44dp" />
+
+        <!-- Label -->
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Healthy"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="44dp" />
+
+        <!-- Confidence -->
+        <TextView
+            android:id="@+id/tvConfidence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confidence: 100%"
+            android:textSize="12sp"
+            android:textColor="#757575"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="44dp"
+            android:visibility="gone" />
+
+        <!-- Remark -->
+        <TextView
+            android:id="@+id/tvRemark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Essential for hydration"
+            android:textSize="13sp"
+            android:textColor="#424242"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="44dp"
+            android:lineSpacingExtra="2dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Allow all HTTP (cleartext) traffic for local development -->
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- Your Flask/FastAPI IP -->
+        <domain includeSubdomains="true">192.168.29.31</domain>
+    </domain-config>
+
+    <!-- Also allow localhost and emulator -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">10.0.2.2</domain>
+        <domain includeSubdomains="true">localhost</domain>
+    </domain-config>
+
+    <!-- Fallback: allow all domains (for development only) -->
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

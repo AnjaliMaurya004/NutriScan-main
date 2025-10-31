@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NutriScan" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/bottleGreen</item>
+        <item name="android:fontFamily"></item>
+
+    </style>
+
+    <style name="Theme.NutriScan" parent="Base.Theme.NutriScan" />
+    <style name="Theme.NutriScan.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your splash background color -->
+        <item name="android:windowBackground">#FFFFFF</item>
+    </style>
+
+</resources>
